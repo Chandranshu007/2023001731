@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FF6F61;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .welcome-section h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #FF6F61;
+        }
+
+        .welcome-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+
+        .welcome-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .register-btn {
+            background-color: #FF6F61;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background-color: #FF4500;
+        }
+
+        /* Login Section */
+        .login-section {
+            background: rgba(0, 195, 255, 0.85);
+            padding: 35px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-section h3 {
+            font-size: 26px;
+            color: #FFD700;
+            background-color: black;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            border: 3px solid black;
+            margin-bottom: 20px;
+        }
+
+        .login-section input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #000;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+        }
+
+        .login-section a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .welcome-section {
+                max-width: 100%;
+            }
+
+            .login-section {
+                width: 90%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">PORTFOLIO</div>
+    </nav>
+
+    <div class="main-content">
+        <div class="welcome-section">
+            <h1>WELCOME TO MY <span class="highlight">WEBSITE</span></h1>
+            <h2>CHANDRANSHU BOJJA</h2>
+            <p>"Please login or register to access my resume and career details."</p>
+            <button class="register-btn" onclick="window.location.href='register.html'">REGISTER</button>
+        </div>
+
+        <div class="login-section">
+            <h3>Login Here</h3>
+            <form method="POST" action="home.html">
+                <input type="email" name="email" placeholder="Enter Email Here" required>
+                <input type="password" name="password" placeholder="Enter Password Here" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+            <p>Follow us on</p>
+            <div class="social-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="x.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

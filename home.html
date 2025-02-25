@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('homebackground.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            scroll-behavior: smooth;
+        }
+
+        /* Dark Overlay for Better Readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00D1FF;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Content */
+        .content {
+            margin-top: 20vh;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .content h1 {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 24px;
+            color: #FFD700;
+        }
+
+        .name {
+            font-weight: bold;
+            color: #00FFCC;
+        }
+
+        /* About Me Section */
+        .about-me {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about-me h2 {
+            font-size: 36px;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-me h3 {
+            font-size: 28px;
+            color: #00D1FF;
+            margin-top: 20px;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .about-me ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-me ul li {
+            font-size: 18px;
+            padding: 8px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #00FFCC;
+        }
+
+        /* Projects & Experience Section with Image */
+        .projects-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .projects-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #00D1FF;
+            object-fit: cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav-links a {
+                margin-left: 15px;
+                font-size: 16px;
+            }
+
+            .content h1 {
+                font-size: 48px;
+            }
+
+            .content p {
+                font-size: 20px;
+            }
+
+            .about-me {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .about-me h2 {
+                font-size: 28px;
+            }
+
+            .about-me h3 {
+                font-size: 22px;
+            }
+
+            .about-me p,
+            .about-me ul li {
+                font-size: 16px;
+            }
+
+            .projects-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .projects-section img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="home.html">About Chandranshu</a>
+            <a href="Chandranshu_resume.pdf">My Resume</a>
+            <a href="exit.html">Logout</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome to My Blog</h1>
+        <p>By <span class="name">Chandranshu Bojja</span></p>
+    </div>
+
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p>Hey there! I'm <span class="highlight">Chandranshu Bojja</span>, a passionate tech enthusiast currently diving deep into the world of programming, data structures, and cybersecurity. I have a keen interest in building real-time applications, working with linked lists, and designing accessible websites.</p>
+
+        <h3>Education & Interests</h3>
+        <p>I'm currently pursuing my studies with a focus on <span class="highlight">Computer Science</span>. My coursework involves **data structures, algorithms, object-oriented programming, and networking concepts.**</p>
+
+        <h3>Projects & Experience</h3>
+        <div class="projects-section">
+            <img src="myphoto.jpg" alt="Chandranshu Bojja">
+            <ul>
+                <li>🛠️ Developed **a real-time task manager using singly linked lists**</li>
+                <li>🎵 Built **a music player playlist manager using linked lists**</li>
+                <li>📂 Created **a portfolio website with login & registration functionality**</li>
+                <li>🖥️ Worked on **circular & doubly linked list projects**</li>
+                <li>🔒 Have knowledge in **cybersecurity & Boolean algebra**</li>
+                <li>📊 Completed an internship as a **Product Analyst**</li>
+            </ul>
+        </div>
+
+        <h3>Technical Skills</h3>
+        <p>💻 **Programming Languages:** Python, Java, HTML, CSS  
+        ⚡ **Data Structures:** Linked Lists, Trees, Queues, Stacks  
+        🔧 **Tools & Technologies:** VS Code, Excel, macOS 15 Sequoia  
+        📡 **Networking & Security:** Computer Networks, Cybersecurity Basics</p>
+
+        <h3>More About Me</h3>
+        <p>Besides coding, I enjoy **table tennis**, and I'm constantly expanding my knowledge in **quantum physics, operating systems, and deep learning**. I also have a strong interest in **stock market investments** and started investing using the Groww app.</p>
+
+        <h3>Let's Connect!</h3>
+        <p>Feel free to connect with me on my portfolio or social media! 🚀</p>
+    </div>
+</body>
+</html>
