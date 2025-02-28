@@ -6,10 +6,6 @@ app = Flask(__name__)
 # Path to the Excel file for storing registered users
 EXCEL_FILE = "registered_users.xlsx"
 
-# ✅ Route for Home Page
-@app.route("/")
-def home():
-    return render_template("home.html")
 
 # ✅ Route for Registration Page
 @app.route("/register", methods=["GET", "POST"])
@@ -39,6 +35,11 @@ def register():
         return redirect(url_for("success"))
 
     return render_template("register.html")
+
+# ✅ Route for Home Page
+@app.route("/")
+def home():
+    return render_template("home.html")
 
 # ✅ Route for Login Page
 @app.route("/login", methods=["GET", "POST"])
